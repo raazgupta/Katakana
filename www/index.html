@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.1.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="practiceList.js"></script>
+
+    <script type="text/javascript">
+
+
+	// If you want to prevent dragging, uncomment this section
+	/*
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	*/
+	
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	/*
+	function handleOpenURL(url)
+	{
+		// TODO: do something with the url passed in.
+	}
+	*/
+	
+    var question;
+    var correctAnswer;
+    var randomRow1;
+    var randomRow2;
+    var randomRow3;
+    var randomAnswer2;
+    var randomAnswer3;
+    var totalAnswerButtons = 3;
+    var correctAnswerButtonNumber;
+        
+        
+        
+	function onBodyLoad()
+	{	
+        //populate random Question and Answers
+        pickQuestionAnswers();
+        populateQuestionAnswers();
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	/* When this function is called, PhoneGap has been initialized and is ready to roll */
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	function onDeviceReady()
+	{
+        
+
+        
+		
+	}
+        
+        function pickQuestionAnswers(){
+            
+            practiceListLength = practiceList.length;
+            // Pick the question and correct answer
+            // Go through the pracetice list array and randomly pick a row
+            randomRow1 = Math.floor(Math.random()*practiceListLength);
+            question = practiceList[randomRow1][0];
+            correctAnswer = practiceList[randomRow1][1];
+            //navigator.notification.alert(question + " " + correctAnswer);
+            
+            //Now find another random Row and check it is not the same as randomRow1
+            randomRow2 = Math.floor(Math.random()*practiceListLength);
+            while(randomRow2 == randomRow1)
+            {
+                randomRow2 = Math.floor(Math.random()*practiceListLength);
+            }
+            randomAnswer2 = practiceList[randomRow2][1];
+            //navigator.notification.alert(randomRow2 + " " + randomAnswer2);
+            
+            //Now find another random Row and check it is not the same as randomRow1 or randomRow2
+            randomRow3 = Math.floor(Math.random()*practiceListLength);
+            while(randomRow3 == randomRow1 || randomRow3 == randomRow2)
+            {
+                randomRow3 = Math.floor(Math.random()*practiceListLength);
+            }
+            randomAnswer3 = practiceList[randomRow3][1];
+            //navigator.notification.alert(randomRow3 + " " + randomAnswer3);
+            
+            
+            
+        }
+        
+        function populateQuestionAnswers(){
+            //Randomly choose the correct answer button
+            correctAnswerButtonNumber = Math.floor(Math.random()*totalAnswerButtons);
+            
+            var answersArray = new Array();
+            answersArray[0] = correctAnswer;
+            answersArray[1] = randomAnswer2;
+            answersArray[2] = randomAnswer3;
+            
+            tempStore = answersArray[correctAnswerButtonNumber];
+            answersArray[correctAnswerButtonNumber] = correctAnswer;
+            answersArray[0] = tempStore;
+            
+            //Now populate the page with the question and answers
+            document.getElementById('question').innerHTML = question;
+            document.getElementById("answer1div").innerHTML = "<button onclick='onButton1Click()' id='answer1' value='"+ answersArray[0] + "'>" + answersArray[0] + "</button>";
+            document.getElementById("answer2div").innerHTML = "<button onclick='onButton2Click()' id='answer2' value='"+ answersArray[1] + "'>" + answersArray[1] + "</button>";
+            document.getElementById("answer3div").innerHTML = "<button onclick='onButton3Click()' id='answer3' value='"+ answersArray[2] + "'>" + answersArray[2] + "</button>";
+        }
+        
+    function onButton1Click()
+    {
+        answer = document.getElementById('answer1').value;
+        checkAnswer(answer);
+    }
+        
+    function onButton2Click()
+        {
+            answer = document.getElementById('answer2').value;
+            checkAnswer(answer);
+        }
+    
+    function onButton3Click()
+        {
+            answer = document.getElementById('answer3').value;
+            checkAnswer(answer);
+        }
+    
+        function checkAnswer(answer){
+            if(answer != correctAnswer)
+            {
+                navigator.notification.alert("Try Again!");
+            }
+            else {
+                window.location.href = "correctAnswer.html";
+            }
+        }
+    
+    </script>
+  </head>
+  <body onload="onBodyLoad()">
+      <a href="#">Settings</a>
+      <a href="#">Help</a>
+      <div id="question"></div>
+      <div id="answer1div"></div>
+      <div id="answer2div"></div>
+      <div id="answer3div"></div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

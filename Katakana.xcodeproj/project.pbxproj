@@ -33,6 +33,7 @@
 		AD7649C31436E56B00A66371 /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7649C21436E56B00A66371 /* Capture.bundle */; };
 		AD7649C51436E56B00A66371 /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD7649C41436E56B00A66371 /* PhoneGap.plist */; };
 		AD7649C91436E56B00A66371 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7649C81436E56B00A66371 /* AppDelegate.m */; };
+		AD7649D21436E5DB00A66371 /* www in Resources */ = {isa = PBXBuildFile; fileRef = AD7649D11436E5DB00A66371 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +51,10 @@
 		AD76499C1436E56B00A66371 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AD76499E1436E56B00A66371 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		AD7649A01436E56B00A66371 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		AD7649A41436E56B00A66371 /* Katakana-Info.plist */ = {isa = PBXFileReference; path = "Katakana-Info.plist"; sourceTree = "<group>"; };
+		AD7649A41436E56B00A66371 /* Katakana-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Katakana-Info.plist"; sourceTree = "<group>"; };
 		AD7649A61436E56B00A66371 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD7649A81436E56B00A66371 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AD7649AA1436E56B00A66371 /* Katakana-Prefix.pch */ = {isa = PBXFileReference; path = "Katakana-Prefix.pch"; sourceTree = "<group>"; };
+		AD7649AA1436E56B00A66371 /* Katakana-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Katakana-Prefix.pch"; sourceTree = "<group>"; };
 		AD7649AB1436E56B00A66371 /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneGap.framework; path = /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework; sourceTree = "<absolute>"; };
 		AD7649B01436E56B00A66371 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AD7649B41436E56B00A66371 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -64,9 +65,10 @@
 		AD7649C01436E56B00A66371 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		AD7649C21436E56B00A66371 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		AD7649C41436E56B00A66371 /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		AD7649C71436E56B00A66371 /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		AD7649C71436E56B00A66371 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		AD7649C81436E56B00A66371 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		AD7649CB1436E56B00A66371 /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		AD7649CB1436E56B00A66371 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		AD7649D11436E5DB00A66371 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		AD7649761436E56B00A66371 = {
 			isa = PBXGroup;
 			children = (
+				AD7649D11436E5DB00A66371 /* www */,
 				AD7649A21436E56B00A66371 /* Katakana */,
 				AD7649871436E56B00A66371 /* Frameworks */,
 				AD7649851436E56B00A66371 /* Products */,
@@ -287,6 +290,7 @@
 				AD7649C11436E56B00A66371 /* Default@2x.png in Resources */,
 				AD7649C31436E56B00A66371 /* Capture.bundle in Resources */,
 				AD7649C51436E56B00A66371 /* PhoneGap.plist in Resources */,
+				AD7649D21436E5DB00A66371 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +412,7 @@
 				GCC_PREFIX_HEADER = "Katakana/Katakana-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "Katakana/Katakana-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -419,7 +424,7 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -435,6 +440,7 @@
 				GCC_PREFIX_HEADER = "Katakana/Katakana-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "Katakana/Katakana-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -446,7 +452,7 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -471,6 +477,7 @@
 				AD7649D01436E56B00A66371 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
