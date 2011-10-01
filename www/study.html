@@ -36,6 +36,8 @@
                  }
                  */
                 
+                var answerRow;
+                
                 function getUrlVars() {
                     var vars = {};
                     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -45,34 +47,33 @@
                 }
 
                 
-                function explainAnswer(){
+                function study(){
                     answerRow = getUrlVars()["answerRow"];
-                    katakana = practiceList[answerRow][0];
-                    romaji = practiceList[answerRow][1];
-                    katakanaWord = practiceList[answerRow][2];
-                    romajiWord = practiceList[answerRow][3];
-                    englishWord = practiceList[answerRow][4];
                     
-                    document.getElementById('correct1').innerHTML = katakana + " - " + romaji;
-                    document.getElementById('correct2').innerHTML = katakanaWord;
-                    document.getElementById('correct3').innerHTML = romajiWord;
-                    document.getElementById('correct4').innerHTML = englishWord;
+                    arrayStart = practiceList[answerRow][5];
+                    arrayEnd = practiceList[answerRow][6];
                     
+                    var buildList = "";
+                    for(loop = arrayStart; loop<= arrayEnd; loop++)
+                    {
+                        katakana = practiceList[loop][0];
+                        romaji = practiceList[loop][1];
+                        buildList = buildList + "<span><div>"+ katakana +"</div><div>" + romaji + "</div></span>";
+                    }
+                    document.getElementById("katakanaList").innerHTML = buildList;
+                    document.getElementById("quiz").innerHTML = "<a href='index.html?answerRow=" + answerRow +"'>Quiz</a>";
                 }
                 
                 function onBodyLoad(){
-                    explainAnswer();
+                    study();
                 }
                 
                                 
                 </script>
             </head>
     <body onload="onBodyLoad()">
-        <div id="correct1"></div>
-        <div id="correct2"></div>
-        <div id="correct3"></div>
-        <div id="correct4"></div>
-        <a href="index.html">Next</a>
+        <div id="quiz"></div>
+        <div id="katakanaList"></div>
     </body>
 </html>
 

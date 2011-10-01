@@ -47,6 +47,14 @@
     var totalAnswerButtons = 3;
     var correctAnswerButtonNumber;
         
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                                                     vars[key] = value;
+                                                     });
+            return vars;
+        }
+        
         
         
 	function onBodyLoad()
@@ -72,9 +80,20 @@
         function pickQuestionAnswers(){
             
             practiceListLength = practiceList.length;
-            // Pick the question and correct answer
-            // Go through the pracetice list array and randomly pick a row
-            randomRow1 = Math.floor(Math.random()*practiceListLength);
+            
+            //Check if answerRow is available as GET variable
+            //If so then no need to choose new question
+            //Set the question and answer as answerRow
+            answerRow = getUrlVars()["answerRow"];
+            if(typeof answerRow != "undefined"){
+                randomRow1 = answerRow;
+            }
+            else{
+                // Pick the question and correct answer
+                // Go through the pracetice list array and randomly pick a row
+                randomRow1 = Math.floor(Math.random()*practiceListLength);
+            }
+            
             question = practiceList[randomRow1][0];
             correctAnswer = practiceList[randomRow1][1];
             //navigator.notification.alert(question + " " + correctAnswer);
@@ -119,6 +138,7 @@
             document.getElementById("answer1div").innerHTML = "<button onclick='onButton1Click()' id='answer1' value='"+ answersArray[0] + "'>" + answersArray[0] + "</button>";
             document.getElementById("answer2div").innerHTML = "<button onclick='onButton2Click()' id='answer2' value='"+ answersArray[1] + "'>" + answersArray[1] + "</button>";
             document.getElementById("answer3div").innerHTML = "<button onclick='onButton3Click()' id='answer3' value='"+ answersArray[2] + "'>" + answersArray[2] + "</button>";
+            document.getElementById("study").innerHTML = "<a href='study.html?answerRow=" + randomRow1 + "'>Study</a>";
         }
         
     function onButton1Click()
@@ -152,8 +172,7 @@
     </script>
   </head>
   <body onload="onBodyLoad()">
-      <a href="#">Settings</a>
-      <a href="#">Help</a>
+      <div id="study"></div>
       <div id="question"></div>
       <div id="answer1div"></div>
       <div id="answer2div"></div>
