@@ -13,6 +13,7 @@
              -->
             <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
             <script type="text/javascript" charset="utf-8" src="phonegap-1.1.0.js"></script>
+            <script type="text/javascript" charset="utf-8" src="practiceList.js"></script>
             <script type="text/javascript">
                 
                 
@@ -35,16 +36,44 @@
                  }
                  */
                 
+                function getUrlVars() {
+                    var vars = {};
+                    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                                                             vars[key] = value;
+                                                             });
+                    return vars;
+                }
+
+                
+                function explainAnswer(){
+                    answerRow = getUrlVars()["answerRow"];
+                    katakana = practiceList[answerRow][0];
+                    romaji = practiceList[answerRow][1];
+                    katakanaWord = practiceList[answerRow][2];
+                    romajiWord = practiceList[answerRow][3];
+                    englishWord = practiceList[answerRow][4];
+                    
+                    document.getElementById('correct1').innerHTML = katakana + " - " + romaji;
+                    document.getElementById('correct2').innerHTML = katakanaWord;
+                    document.getElementById('correct3').innerHTML = romajiWord;
+                    document.getElementById('correct4').innerHTML = englishWord;
+                    
+                }
+                
+                function onBodyLoad(){
+                    explainAnswer();
+                }
+                
                                 
                 </script>
             </head>
     <body onload="onBodyLoad()">
         <a href="#">Settings</a>
         <a href="#">Help</a>
-        <div id="correct1">カ - ka</div>
-        <div id="correct2">カナダ</div>
-        <div id="correct3">ka na da</div>
-        <div id="correct4">Canada</div>
+        <div id="correct1"></div>
+        <div id="correct2"></div>
+        <div id="correct3"></div>
+        <div id="correct4"></div>
         <a href="index.html">Next</a>
     </body>
 </html>
