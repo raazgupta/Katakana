@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD13B9131437B91A005E0A95 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD13B9121437B91A005E0A95 /* icon@2x.png */; };
+		AD13B9171437BCC3005E0A95 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7649B71436E56B00A66371 /* icon.png */; };
 		AD7649891436E56B00A66371 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7649881436E56B00A66371 /* Foundation.framework */; };
 		AD76498B1436E56B00A66371 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD76498A1436E56B00A66371 /* UIKit.framework */; };
 		AD76498D1436E56B00A66371 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD76498C1436E56B00A66371 /* CoreGraphics.framework */; };
@@ -25,8 +27,6 @@
 		AD7649AC1436E56B00A66371 /* PhoneGap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7649AB1436E56B00A66371 /* PhoneGap.framework */; };
 		AD7649B11436E56B00A66371 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7649AF1436E56B00A66371 /* Localizable.strings */; };
 		AD7649B51436E56B00A66371 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7649B31436E56B00A66371 /* Localizable.strings */; };
-		AD7649B81436E56B00A66371 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7649B71436E56B00A66371 /* icon.png */; };
-		AD7649BA1436E56B00A66371 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7649B91436E56B00A66371 /* icon@2x.png */; };
 		AD7649BC1436E56B00A66371 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7649BB1436E56B00A66371 /* icon-72.png */; };
 		AD7649BF1436E56B00A66371 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7649BE1436E56B00A66371 /* Default.png */; };
 		AD7649C11436E56B00A66371 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7649C01436E56B00A66371 /* Default@2x.png */; };
@@ -37,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD13B9121437B91A005E0A95 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		AD13B9151437B9AA005E0A95 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		AD7649841436E56B00A66371 /* Katakana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Katakana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7649881436E56B00A66371 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AD76498A1436E56B00A66371 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -106,6 +108,8 @@
 		AD7649761436E56B00A66371 = {
 			isa = PBXGroup;
 			children = (
+				AD13B9151437B9AA005E0A95 /* icon.png */,
+				AD13B9121437B91A005E0A95 /* icon@2x.png */,
 				AD7649D11436E5DB00A66371 /* www */,
 				AD7649A21436E56B00A66371 /* Katakana */,
 				AD7649871436E56B00A66371 /* Frameworks */,
@@ -283,14 +287,14 @@
 				AD7649A71436E56B00A66371 /* InfoPlist.strings in Resources */,
 				AD7649B11436E56B00A66371 /* Localizable.strings in Resources */,
 				AD7649B51436E56B00A66371 /* Localizable.strings in Resources */,
-				AD7649B81436E56B00A66371 /* icon.png in Resources */,
-				AD7649BA1436E56B00A66371 /* icon@2x.png in Resources */,
 				AD7649BC1436E56B00A66371 /* icon-72.png in Resources */,
 				AD7649BF1436E56B00A66371 /* Default.png in Resources */,
 				AD7649C11436E56B00A66371 /* Default@2x.png in Resources */,
 				AD7649C31436E56B00A66371 /* Capture.bundle in Resources */,
 				AD7649C51436E56B00A66371 /* PhoneGap.plist in Resources */,
 				AD7649D21436E5DB00A66371 /* www in Resources */,
+				AD13B9131437B91A005E0A95 /* icon@2x.png in Resources */,
+				AD13B9171437BCC3005E0A95 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

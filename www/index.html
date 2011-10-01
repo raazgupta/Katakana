@@ -4,6 +4,7 @@
   <title></title>
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <link rel="stylesheet" type="text/css" href="iphone.css" />
 	<meta charset="utf-8">
 
 
@@ -138,7 +139,7 @@
             document.getElementById("answer1div").innerHTML = "<button onclick='onButton1Click()' id='answer1' value='"+ answersArray[0] + "'>" + answersArray[0] + "</button>";
             document.getElementById("answer2div").innerHTML = "<button onclick='onButton2Click()' id='answer2' value='"+ answersArray[1] + "'>" + answersArray[1] + "</button>";
             document.getElementById("answer3div").innerHTML = "<button onclick='onButton3Click()' id='answer3' value='"+ answersArray[2] + "'>" + answersArray[2] + "</button>";
-            document.getElementById("study").innerHTML = "<a href='study.html?answerRow=" + randomRow1 + "'>Study</a>";
+            document.getElementById("study").innerHTML = "<a href='study.html?answerRow=" + randomRow1 + "'><img src='img/book.png' class='bookResize'></a>";
         }
         
     function onButton1Click()
