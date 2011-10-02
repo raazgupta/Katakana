@@ -3,7 +3,57 @@ body
 	background-color: #9fcfea;
 }
 
-.bookResize {
+.bookStyle {
     height: 50px;
     width: 50px;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+#question {
+    position: fixed;
+    top: 50px;
+    left: 185px;
+    text-align: center;
+    font-size: 400%;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #57f9ca;
+    background-color: #ffffff;
+    height: 100px;
+    width: 100px;
+}
+
+.answerButton
+{
+    border-color: #f95525;
+    background-color: #ffffff;
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
+    border-style: solid;
+    font-size: 400%;
+    text-align: center; 
+}
+
+#answer1div
+{
+    position: fixed;
+    top: 175px;
+    left: 50px;
+}
+
+#answer2div
+{
+    position: fixed;
+    top: 175px;
+    left: 195px;
+}
+
+#answer3div
+{
+    position: fixed;
+    top: 175px;
+    right: 50px;
 }

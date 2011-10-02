@@ -136,27 +136,27 @@
             
             //Now populate the page with the question and answers
             document.getElementById('question').innerHTML = question;
-            document.getElementById("answer1div").innerHTML = "<button onclick='onButton1Click()' id='answer1' value='"+ answersArray[0] + "'>" + answersArray[0] + "</button>";
-            document.getElementById("answer2div").innerHTML = "<button onclick='onButton2Click()' id='answer2' value='"+ answersArray[1] + "'>" + answersArray[1] + "</button>";
-            document.getElementById("answer3div").innerHTML = "<button onclick='onButton3Click()' id='answer3' value='"+ answersArray[2] + "'>" + answersArray[2] + "</button>";
-            document.getElementById("study").innerHTML = "<a href='study.html?answerRow=" + randomRow1 + "'><img src='img/book.png' class='bookResize'></a>";
+            document.getElementById("answer1div").innerHTML = "<div onclick='onButton1Click()' id='answer1' class='answerButton' value='"+ answersArray[0] + "'>" + answersArray[0] + "</div>";
+            document.getElementById("answer2div").innerHTML = "<div onclick='onButton2Click()' id='answer2' class='answerButton' value='"+ answersArray[1] + "'>" + answersArray[1] + "</div>";
+            document.getElementById("answer3div").innerHTML = "<div onclick='onButton3Click()' id='answer3' class='answerButton' value='"+ answersArray[2] + "'>" + answersArray[2] + "</div>";
+            document.getElementById("study").innerHTML = "<a href='study.html?answerRow=" + randomRow1 + "'><img src='img/book.png' class='bookStyle'></a>";
         }
         
     function onButton1Click()
     {
-        answer = document.getElementById('answer1').value;
+        answer = document.getElementById('answer1').innerHTML;
         checkAnswer(answer);
     }
         
     function onButton2Click()
         {
-            answer = document.getElementById('answer2').value;
+            answer = document.getElementById('answer2').innerHTML;
             checkAnswer(answer);
         }
     
     function onButton3Click()
         {
-            answer = document.getElementById('answer3').value;
+            answer = document.getElementById('answer3').innerHTML;
             checkAnswer(answer);
         }
     
