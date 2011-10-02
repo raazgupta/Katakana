@@ -5,7 +5,7 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
         <meta charset="utf-8">
-            
+        <link rel="stylesheet" type="text/css" href="iphone.css" />
             
             <!-- iPad/iPhone specific css below, add after your main css >
              <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
@@ -67,12 +67,14 @@
                                 
                 </script>
             </head>
-    <body onload="onBodyLoad()">
-        <div id="correct1"></div>
-        <div id="correct2"></div>
-        <div id="correct3"></div>
-        <div id="correct4"></div>
-        <a href="index.html">Next</a>
+    <body id="answerBody" onload="onBodyLoad()">
+        <div id="answer">
+            <div id="correct1"></div>
+            <div id="correct2"></div>
+            <div id="correct3"></div>
+            <div id="correct4"></div>
+        </div>
+        <a href="index.html"><img class="questionStyle" src="img/question.png"></a>
     </body>
 </html>
 

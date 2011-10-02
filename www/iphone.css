@@ -1,13 +1,58 @@
-body
+#questionBody
 {
 	background-color: #9fcfea;
 }
 
+#answerBody
+{
+    background-color: #57f9ca;
+}
+
+#studyBody
+{
+    background-color: #9fcfea;
+}
+
+#answer {
+    position: fixed;
+    top: 50px;
+    left: 130px;
+    text-align: center;
+    font-size: 200%;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #f95525;
+    background-color: #ffffff;
+    height: 175px;
+    width: 200px;
+    padding: 10px;
+
+}
+
+#studyRow {
+    text-align: center;
+    font-size: 150%;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #f95525;
+    background-color: #ffffff;
+    padding: 5px;
+
+}
+
 .bookStyle {
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    top: 3px;
+    right: 5px;
+}
+
+.questionStyle{
     height: 50px;
     width: 50px;
     position: fixed;
-    top: 5px;
+    bottom: 5px;
     right: 5px;
 }
 
