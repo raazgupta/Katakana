@@ -54,14 +54,24 @@
                     arrayStart = practiceList[answerRow][5];
                     arrayEnd = practiceList[answerRow][6];
                     
-                    var buildList = "<div id='studyRow'>";
-                    for(loop = arrayStart; loop<= arrayEnd; loop++)
-                    {
-                        katakana = practiceList[loop][0];
-                        romaji = practiceList[loop][1];
-                        buildList = buildList + " "+ katakana +" (" + romaji + ")";
+                    mainLoopEnd = practiceList.length -1;
+                    mainLoopStart = 0;
+                    
+                    var buildList = "";
+                    for(mainLoopCurrent = 0; mainLoopCurrent <= mainLoopEnd; mainLoopCurrent++){
+                        currentStart = practiceList[mainLoopCurrent][5];
+                        currentEnd = practiceList[mainLoopCurrent][6];
+                        var buildList = buildList + "<div id='studyRow'>";
+                        for(loop = currentStart; loop<= currentEnd; loop++)
+                        {
+                            katakana = practiceList[loop][0];
+                            romaji = practiceList[loop][1];
+                            buildList = buildList + " "+ katakana +" (" + romaji + ")";
+                        }
+                        buildList = buildList + "</div>";
+                        mainLoopCurrent = currentEnd;
                     }
-                    buildList = buildList + "</div>";
+                    
                     document.getElementById("katakanaList").innerHTML = buildList;
                     document.getElementById("quiz").innerHTML = "<a href='index.html?answerRow=" + answerRow +"'><img class='questionStyle' src='img/question.png'></a>";
                 }
