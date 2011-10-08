@@ -64,17 +64,20 @@
                     explainAnswer();
                 }
                 
+                function newQuestion(){
+                    window.location.href = "index.html";
+                }
+                
                                 
                 </script>
             </head>
     <body id="answerBody" onload="onBodyLoad()">
-        <div id="answer">
+        <div onClick="newQuestion()" id="answer">
             <div id="correct1"></div>
             <div id="correct2"></div>
             <div id="correct3"></div>
             <div id="correct4"></div>
         </div>
-        <a href="index.html"><img class="questionStyle" src="img/question.png"></a>
     </body>
 </html>
 
