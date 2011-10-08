@@ -61,23 +61,31 @@
                     for(mainLoopCurrent = 0; mainLoopCurrent <= mainLoopEnd; mainLoopCurrent++){
                         currentStart = practiceList[mainLoopCurrent][5];
                         currentEnd = practiceList[mainLoopCurrent][6];
-                        var buildList = buildList + "<div id='studyRow'>";
+                        
+                        buildList = buildList + "<div onClick='backToQuiz("+answerRow+")' id='row"+currentStart+"'>";
+                        buildList = buildList + "<div id='studyRow'>";
                         for(loop = currentStart; loop<= currentEnd; loop++)
                         {
                             katakana = practiceList[loop][0];
                             romaji = practiceList[loop][1];
                             buildList = buildList + " "+ katakana +" (" + romaji + ")";
                         }
-                        buildList = buildList + "</div>";
+                        buildList = buildList + "</div></div>";
                         mainLoopCurrent = currentEnd;
                     }
                     
                     document.getElementById("katakanaList").innerHTML = buildList;
-                    document.getElementById("quiz").innerHTML = "<a href='index.html?answerRow=" + answerRow +"'><img class='questionStyle' src='img/question.png'></a>";
+                    
+                    document.getElementById("row"+arrayStart).scrollIntoView();
+                    
                 }
                 
                 function onBodyLoad(){
                     study();
+                }
+                
+                function backToQuiz(answerRow){
+                    window.location.href = "index.html?answerRow="+answerRow;
                 }
                 
                                 
