@@ -67,7 +67,6 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "Katakana"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

@@ -22,7 +22,7 @@
 "ニ","ni","ニュース","nyuu su","News",20,24
 "ヌ","nu","ヌガー","nu gaa","Nougat",20,24
 "ネ","ne","ネクタイ","ne ku ta i","Neck Tie",20,24
-"ノ","no","ノルウェー","no ru wee","Norway",20,24
+"ノ","no","ノルウェー","no ru uee","Norway",20,24
 "ハ","ha","ハープ","haa pu","Harp",25,29
 "ヒ","hi","ヒント","hi n to","Hint",25,29
 "フ","fu","フランス","fu ra n su","France",25,29
@@ -60,11 +60,11 @@
 "デ","de","デイズニー","de i zu nii","Disney",56,60
 "ド","do","ドコモ","do ko mo","Docomo",56,60
 "バ","ba","バッフャロー","ba ffya ro","Buffalo",61,65
-"ビ","bi","ビックカメラ","bi kku ka me ra","Bic camera",61,65
+"ビ","bi","ビック","bi kku","Bic",61,65
 "ブ","bu","ブログ","bu ro gu","Blog",61,65
 "ベ","be","ベクター","be ku taa","Vector",61,65
-"ボ","bo","トライボ","to ra i bu","Tribe",61,65
-"パ","pa","パナソニック","ps na so ni kku","Panasonic",66,70
+"ボ","bo","トライボ","to ra i bo","Tribe",61,65
+"パ","pa","パナソニック","pa na so ni kku","Panasonic",66,70
 "ピ","pi","ピザーラ","pi zaa ra","Pizza La",66,70
 "プ","pu","プリウス","pu ri u zu","Prius",66,70
 "ペ","pe","ペルソナ","pe ru so na","Persona",66,70
